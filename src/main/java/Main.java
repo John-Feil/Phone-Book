@@ -7,7 +7,7 @@ public class Main {
 
         phonebook.add("John","484-915-6810");
         phonebook.add("Donna","610-259-5760");
-        phonebook.addAll("Joe","915-234-5465","215,687,4956");
+        phonebook.addAll("Joe","915-234-5465","215-687-4956");
         phonebook.add("Mike","348-584-5869");
         phonebook.add("Katie","948-384-5968");
 
@@ -15,8 +15,9 @@ public class Main {
         phonebook.remove("John");
         System.out.println(phonebook.getAllContactNames());
 
-        System.out.println(phonebook.hasEntry("John"));
+        System.out.println(phonebook.hasEntry("Donna"));
         System.out.println(phonebook.lookup("Joe"));
-        System.out.println(phonebook.reverseLookup("215,687,4956"));
+        System.out.println(phonebook.reverseLookup("348-584-5869"));
+        System.out.println(phonebook.hasEntry("Joe","610-259-5760"));
     }
 }

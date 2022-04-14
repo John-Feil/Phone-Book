@@ -33,6 +33,15 @@ public class PhoneBook {
         return this.phonebook.containsKey(name);
     }
 
+    public Boolean hasEntry(String name, String phoneNumber){
+        if (this.phonebook.containsKey(name)) {
+            if(this.phonebook.containsValue(List.of(phoneNumber))){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public List<String> lookup(String name) {
         return this.phonebook.get(name);
     }
